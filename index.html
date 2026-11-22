@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central de Utilidades</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Central de Utilidades</h1>
+        <p>Ferramentas simples e práticas para resolver situações do dia a dia.</p>
+    </header>
+
+    <main>
+
+        <section id="descontos">
+            <h2>Calculadora de Descontos</h2>
+
+            <form id="formDesconto">
+                <label for="precoOriginal">Preço original do produto (R$):</label>
+                <input type="number" id="precoOriginal" min="0.01" step="0.01" required>
+
+                <label for="percentualDesconto">Percentual de desconto (%):</label>
+                <input type="number" id="percentualDesconto" min="0" max="100" step="0.01" required>
+
+                <button type="submit">Calcular Desconto</button>
+            </form>
+
+            <div id="resultadoDesconto" class="resultado" aria-live="polite"></div>
+        </section>
+
+        <section id="parcelas">
+            <h2>Calculadora de Parcelas</h2>
+
+            <form id="formParcelas">
+                <label for="valorCompra">Valor total da compra (R$):</label>
+                <input type="number" id="valorCompra" min="0.01" step="0.01" required>
+
+                <label for="quantidadeParcelas">Quantidade de parcelas:</label>
+                <input type="number" id="quantidadeParcelas" min="1" step="1" required>
+
+                <button type="submit">Calcular Parcelas</button>
+            </form>
+
+            <div id="resultadoParcelas" class="resultado" aria-live="polite"></div>
+        </section>
+
+        <section id="investimentos">
+            <h2>Simulador de Investimentos</h2>
+
+            <form id="formInvestimento">
+                <label for="investimentoInicial">Investimento inicial (R$):</label>
+                <input type="number" id="investimentoInicial" min="0" step="0.01" required>
+
+                <label for="aporteMensal">Aporte mensal (R$):</label>
+                <input type="number" id="aporteMensal" min="0" step="0.01" required>
+
+                <label for="taxaRendimento">Taxa de rendimento mensal (%):</label>
+                <input type="number" id="taxaRendimento" min="0" step="0.01" required>
+
+                <label for="periodoInvestimento">Período do investimento (meses):</label>
+                <input type="number" id="periodoInvestimento" min="1" step="1" required>
+
+                <button type="submit">Simular Investimento</button>
+            </form>
+
+            <div id="resultadoInvestimento" class="resultado" aria-live="polite"></div>
+        </section>
+
+        <section id="despesas">
+            <h2>Divisor de Despesas</h2>
+
+            <form id="formDespesa">
+                <label for="descricaoDespesa">Descrição da despesa:</label>
+                <input type="text" id="descricaoDespesa" maxlength="100" required>
+
+                <label for="valorDespesa">Valor da despesa (R$):</label>
+                <input type="number" id="valorDespesa" min="0.01" step="0.01" required>
+
+                <button type="submit">Adicionar Despesa</button>
+            </form>
+
+            <h3>Despesas cadastradas</h3>
+
+            <ul id="listaDespesas"></ul>
+
+            <label for="quantidadePessoas">Quantidade de pessoas:</label>
+            <input type="number" id="quantidadePessoas" min="1" step="1" value="1">
+
+            <div id="resultadoDespesas" class="resultado" aria-live="polite"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Central de Utilidades - Projeto Integrador</p>
+        <p>Programação Web I</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
